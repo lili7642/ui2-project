@@ -7,4 +7,9 @@ body {
 
 img {
   height: 500px;
+  border-radius: 10px;
+}
+
+input[type=number] {
+  appearance: textfield;
 }
