@@ -42,6 +42,8 @@ button {
     margin-bottom: 0.5rem;
     color: #333;
   }
+
+
   
   input {
     border: none;
@@ -74,11 +76,12 @@ button {
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
   
-  .input-submit:hover {
+  input[type = submit]:hover {
     transform: scale(1.05);
+    font-size: 105%;
   }
   
-  .input-submit:active {
+  input[type = submit]:active {
     transform: scale(0.95);
     background-color: #0076A3;
   }
