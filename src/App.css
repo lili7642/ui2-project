@@ -2,6 +2,7 @@ body {
   text-align: center;
   background-color: #23272f;
   color: white;
+  overflow: hidden;
 }
 
 #mainWrapper {
@@ -17,13 +18,4 @@ img {
   height: 350px;
   max-width: 100%;
   
-}
-.image-large {
-  height: 600px;
-  z-index: 999;
-}
-
-
-input[type=number] {
-  appearance: textfield;
 }

@@ -1,23 +1,27 @@
 import React, {useState} from 'react';
 import "./Game.css"
+import Image from './Image';
 import husdata from './hus/hus_data';
-import { type } from '@testing-library/user-event/dist/type';
+
 
 
 /**
  * 
  * TODO:
  * -[x] mindre bild som går att göra större
- * -[] bilden hovrar över de andra elementen när zoomad
- * -[] numrera bilderna på skärmen
- * -[] skapa div för gjord gissning som visar om den var under eller över
+ * -[x] bilden hovrar över de andra elementen när zoomad
+ * -[x] numrera bilderna på skärmen
+ * -[x] skapa div för gjord gissning som visar om den var under eller över
  * -[x] lägg till statisk "SEK" inuti input field
  * -[] visa ledtrådar
  * -[] fyll ut databas
  * -[x] visa antal gissningar
  * -[x] input field gör mellan rum mellan siffror när man skriver => 1_000_000
- * -[] remove scroll func
+ * -[x] remove scroll func
  * -[] center input field text
+ * -[] add settings icon
+ * -[] add language
+ * 
  */
 
 
@@ -56,9 +60,9 @@ const antiFormatString = (str) => {
 
 function Game(props) {
 
-    const [bild, setBild] = useState(0);
+    
     const [guess, setGuess] = useState({str: "", val: 0});
-    const [isBig, setBig] = useState(false);
+    
     
     const [numMadeGuesses, setNumMadeGuesses] = useState(0);
     const [guessStack, setGuessStack] = useState(
@@ -68,17 +72,7 @@ function Game(props) {
     );
 
 
-    const nästaBild = () => {
-        bild < (hus.images.length - 1) ? setBild(bild + 1) : setBild(0);
-    }
-
-    const föregåendeBild = () => {
-        bild > 0 ? setBild(bild - 1) : setBild(hus.images.length - 1);
-    }
-
-    const toggleSize = () => {
-        setBig((prev) => !prev)
-    }
+    
 
     const handleNumChange = (e) => {
         const allowed = /^[0-9\s]+$/;
@@ -98,20 +92,6 @@ function Game(props) {
         if(guess.str !== "" && numMadeGuesses !== LIFES){
             
             const score = evaluateGuess(Number(guess.val));
-            
-            switch (score) {
-                case 0:
-                    alert("GRATTIS DU VANN");
-                    break;
-                case 1:
-                    alert("FÖR HÖGT");
-                    break;
-                case -1:
-                    alert("FÖR LÅGT");
-                    break;
-                default:
-                    break;
-                }
                             
             setGuessStack(prevStack => prevStack.map(item => (
                 item.id === numMadeGuesses ? {...item, guess: guess.str, made: true, score: score} : item
@@ -125,28 +105,7 @@ function Game(props) {
 
     return(
         <>
-            <div className='imageContainer'>
-                <img 
-                    className={isBig ? "image-large" : "image"} 
-                    src={hus.images[bild]} 
-                    alt='Nuvarande bild'
-                    onClick={toggleSize}
-                    ></img>
-            </div>
-
-            <div id='buttonWrapper'>
-                <button
-                    type='button'
-                    onClick={föregåendeBild}
-                >&#129092;</button>
-                <span id='imageNumberSpan'>
-                    {bild}
-                </span>
-                <button
-                    type='button'
-                    onClick={nästaBild}
-                >&#129094;</button>
-            </div>
+            < Image />
             
             <h1>{hus.adress}</h1>
 
