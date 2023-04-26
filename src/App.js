@@ -5,8 +5,11 @@ import Game from './components/Game.js';
 function App() {
   return (
     <>
-      <h1>HEMNETDLE</h1>
-      < Game />
+      <div id='mainWrapper'>
+        <h1>HEMNETDLE</h1>
+        < Game />
+      </div>
+      
     </>
   );
 }

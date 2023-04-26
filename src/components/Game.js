@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./Game.css"
 import husdata from './hus/hus_data';
+import { type } from '@testing-library/user-event/dist/type';
 
 
 /**
@@ -10,23 +11,62 @@ import husdata from './hus/hus_data';
  * -[] bilden hovrar över de andra elementen när zoomad
  * -[] numrera bilderna på skärmen
  * -[] skapa div för gjord gissning som visar om den var under eller över
- * -[] lägg till statisk "SEK" inuti input field
+ * -[x] lägg till statisk "SEK" inuti input field
  * -[] visa ledtrådar
  * -[] fyll ut databas
- * -[] visa antal gissningar
- * 
+ * -[x] visa antal gissningar
+ * -[x] input field gör mellan rum mellan siffror när man skriver => 1_000_000
+ * -[] remove scroll func
+ * -[] center input field text
  */
 
 
 const hus = husdata[0];
-const rättpris = hus.pris;
+const rättPris = hus.pris;
+const permittedError = 0.05;
+const LIFES = 5;
+
+const scoreEmojis = {"0": "✅",
+                     "-1": "🔺", 
+                    "1": "🔻"};
+
+function evaluateGuess(guess){
+    const pris = Number(antiFormatString(rättPris));
+    if(guess < pris*(1-permittedError)){
+        return(-1); // SVAR FÖR LÅGT
+    }else if (guess > pris*(1+permittedError)){
+        return(1); // SVAR FÖR HÖGT
+    }else{
+        return 0; // RÄTT SVAR
+    }
+}
+
+ // ADDS SPACES TO NUMBER 1234567 => 1 234 567
+ const formatString = (str) => {
+    const formattedString = str.split('').reverse().join('').replace(/(.{3})/g, '$1 ').trim().split('').reverse().join('');
+    return formattedString;
+}
+
+const antiFormatString = (str) => {
+    const reFormattedString = str.split('').reverse().join('').replace(/\s/g, '').split('').reverse().join('');
+    return reFormattedString;
+}
+
+
 
 function Game(props) {
 
     const [bild, setBild] = useState(0);
-    const [guess, setGuess] = useState("");
-    const [stack, setStack] = useState([]);
+    const [guess, setGuess] = useState({str: "", val: 0});
     const [isBig, setBig] = useState(false);
+    
+    const [numMadeGuesses, setNumMadeGuesses] = useState(0);
+    const [guessStack, setGuessStack] = useState(
+        Array.from(
+            {length: LIFES}, (v,i) => ({id:i, guess: 0, made: false, score: 2})
+        )
+    );
+
 
     const nästaBild = () => {
         bild < (hus.images.length - 1) ? setBild(bild + 1) : setBild(0);
@@ -40,22 +80,48 @@ function Game(props) {
         setBig((prev) => !prev)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        addDiv();
-        setGuess("");
-    }
-
-    const addDiv = () => {
-        const thisGuess = guess;
-        if(thisGuess !== ""){
-            const newDiv = 
-            <div key={stack.length}>
-                {thisGuess} SEK
-            </div>;
-            setStack(prevStack => [newDiv, ...prevStack]);
+    const handleNumChange = (e) => {
+        const allowed = /^[0-9\s]+$/;
+        const limit = 20; // CHARACTER LIMIT
+        const currentGuess = antiFormatString(e.target.value.slice(0, limit));
+        if (allowed.test(currentGuess)){
+            setGuess(prev => ({str: currentGuess, val: currentGuess}));
         }
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        addGuess();
+    }
+
+    const addGuess = () => {
+        if(guess.str !== "" && numMadeGuesses !== LIFES){
+            
+            const score = evaluateGuess(Number(guess.val));
+            
+            switch (score) {
+                case 0:
+                    alert("GRATTIS DU VANN");
+                    break;
+                case 1:
+                    alert("FÖR HÖGT");
+                    break;
+                case -1:
+                    alert("FÖR LÅGT");
+                    break;
+                default:
+                    break;
+                }
+                            
+            setGuessStack(prevStack => prevStack.map(item => (
+                item.id === numMadeGuesses ? {...item, guess: guess.str, made: true, score: score} : item
+            )))
+            setNumMadeGuesses(numMadeGuesses + 1);
+            setGuess({str: "", val: 0});
+        }
+    }
+
+   
 
     return(
         <>
@@ -68,12 +134,14 @@ function Game(props) {
                     ></img>
             </div>
 
-            <div>
+            <div id='buttonWrapper'>
                 <button
                     type='button'
                     onClick={föregåendeBild}
                 >&#129092;</button>
-
+                <span id='imageNumberSpan'>
+                    {bild}
+                </span>
                 <button
                     type='button'
                     onClick={nästaBild}
@@ -82,18 +150,52 @@ function Game(props) {
             
             <h1>{hus.adress}</h1>
 
-            <div>
-                {stack.map(div => div)} 
-            </div>
+            <div id='guessWrapper'>
 
-            <form onSubmit={handleSubmit}>
-                <input 
-                    type='number'
-                    value = {guess}
-                    onChange = {(e) => setGuess(e.target.value)}
-                ></input>
-                <input type='submit'/>
-            </form>
+                <div id='allGuessesContainer'>
+                    {guessStack.map((item) => (
+                        !item.made ?
+                            <div
+                            className= "guessDiv"
+                            key={item.id}
+                            >
+                                GUESS {item.id + 1}/{LIFES}
+                            </div>
+                        :
+                            <>
+                            <div
+                            className= "madeGuessDiv"
+                            key={item.id}
+                            >
+                                {formatString(item.guess) + " "}
+                                <span className='sekDiv'>
+                                 SEK
+                                </span>   
+                                <span className='scoreSpan'>
+                                    {scoreEmojis[String(item.score)]}
+                                </span>
+                            </div>
+                            </>
+                        ))}
+                </div>
+                
+
+
+                <form onSubmit={handleSubmit}>
+                    
+                    <div className='inputDiv'>
+                        <input 
+                            type='text'
+                            value = {formatString(guess.str)}
+                            onChange = {handleNumChange}
+                            placeholder='Make a guess'
+                        ></input>
+                        <span className='inputSekDiv'>SEK</span>
+                    </div>
+                    <input type='submit' value={"GUESS"}/> 
+                </form>
+            </div>
+            
         </>
     );
 }

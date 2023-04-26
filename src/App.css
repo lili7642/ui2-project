@@ -4,12 +4,18 @@ body {
   color: white;
 }
 
+#mainWrapper {
+  width: 550px;
+  margin: 0 auto;
+}
+
 img {
   border-radius: 10px;
 }
 
 .image {
   height: 350px;
+  max-width: 100%;
   
 }
 .image-large {

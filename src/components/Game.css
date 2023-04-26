@@ -11,7 +11,11 @@ button {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 1rem 2rem;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 15%;
+
     border: none;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -28,12 +32,23 @@ button {
     background-color: #0076A3;
   }
 
+  #buttonWrapper{
+
+    display: flex;
+    justify-content: center;
+  }
+
+  #imageNumberSpan {
+    width: 15%;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 2;
+  }
+
   /* INPUT FORM STYLING*/
 
   form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+    position: relative;
     margin: 0 auto;
   }
   
@@ -46,14 +61,23 @@ button {
 
   
   input {
+    position: relative;
+    width: 100%;
+
+    box-sizing: border-box; /*CHAT GPT MAGIC */
+
     border: none;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
     padding: 1rem;
     font-size: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.2s ease-in-out;
   }
+
+
   
   input:focus {
     outline: none;
@@ -84,4 +108,75 @@ button {
   input[type = submit]:active {
     transform: scale(0.95);
     background-color: #0076A3;
+  }
+
+  input[type = number] {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+  }
+
+  #guessWrapper {
+    
+  }
+
+  #allGuessesContainer {
+    border: white 2px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .guessDiv {
+    padding: 15px;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    color: gray;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .madeGuessDiv {
+    position: relative;
+    justify-content: center;
+
+    background-color: #0076A3;
+    padding: 15px;
+
+    font-size: 1rem;
+    font-size: 110%;
+    font-weight: bold;
+
+    border-bottom: white 2px solid;
+
+    transition: 0.2s ease-in-out;
+    
+  }
+
+  .sekDiv {
+
+    /* position: absolute;
+    right:10px; */
+
+  }
+
+  .scoreSpan{
+    position: absolute;
+    right:10px;
+  }
+
+  .inputDiv{
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+
+  .inputSekDiv {
+    
+    color: gray;
+    position: absolute;
+    right: 10px;
+    padding-top: 15px;
+    font-weight: normal;
+    
+    content: "SEK";
   }
