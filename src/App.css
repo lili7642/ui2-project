@@ -10,12 +10,45 @@ body {
   margin: 0 auto;
 }
 
-img {
-  border-radius: 10px;
+.headerWrapper {
+  
+  display: flex;
+  height: 50px;
 }
 
-.image {
-  height: 350px;
-  max-width: 100%;
+#subHeaderWrapper1 {
   
+  width: 50%;
+  position: relative;
+}
+
+#subHeaderWrapper2 {
+  width:50%;
+  position: relative;
+}
+
+.headerIcon {
+  font-size: 24px;
+  position: absolute;
+  bottom: 3px;
+}
+
+#gearDiv {
+  right:0px;
+
+}
+
+#helpDiv {
+  right: 36px;
+}
+
+#chartDiv {
+  right: 60px;
+}
+
+#titleThing {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

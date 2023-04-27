@@ -6,7 +6,18 @@ function App() {
   return (
     <>
       <div id='mainWrapper'>
-        <h1>HEMNETDLE</h1>
+        <div className='headerWrapper'>
+          <div id='subHeaderWrapper1'>
+            <h1 id='titleThing'>HEMNETDLE</h1>
+          </div>
+          <div id='subHeaderWrapper2'>
+            <div className='headerIcon' id='gearDiv'>⚙️</div>
+            <div className='headerIcon' id='helpDiv'>❓</div>
+            <div className='headerIcon' id='chartDiv'>🏆</div>
+          </div>
+          
+        </div>
+        
         < Game />
       </div>
       
