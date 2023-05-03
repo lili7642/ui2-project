@@ -1,12 +1,16 @@
 # TODO:
 
 - [ ] visa ledtrådar
-- [ ] visa bilder eftersom
+- [ ] visa fler bilder när man gissar
 
 - [ ] fyll ut databas
     - [ ] automatisera, API?
 
 - [ ] center input field text
+
+- [ ] inställningar
+    - [ ] language here?
+    - [ ] darkmode / flashbang mode
 
 
 - [ ] add language
