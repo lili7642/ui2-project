@@ -3,10 +3,14 @@ import "./Game.css"
 import Image from './Image';
 import husdata from './hus/hus_data';
 
+import gameover from '../assets/sfx/game-over-sfx.mp3'
+
 const hus = husdata[0];
 const rättPris = hus.pris;
 const permittedError = 0.05;
 const LIFES = 5;
+
+const gameOverSound = new Audio(gameover);
 
 const scoreEmojis = {"0": "✅",
                      "-1": "🔺", 
@@ -49,9 +53,6 @@ function Game(props) {
         )
     );
 
-
-    
-
     const handleNumChange = (e) => {
         const allowed = /^[0-9\s]+$/;
         const limit = 20; // CHARACTER LIMIT
@@ -63,6 +64,7 @@ function Game(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        gameOverSound.play();
         addGuess();
     }
 
