@@ -4,13 +4,16 @@ import Image from './Image';
 import husdata from './hus/hus_data';
 
 import gameover from '../assets/sfx/game-over-sfx.mp3'
+import gamewon from '../assets/sfx/game-won-sfx.mp3'
 
 const hus = husdata[0];
 const rättPris = hus.pris;
 const permittedError = 0.05;
 const LIFES = 5;
 
+// SOUND EFFECTS
 const gameOverSound = new Audio(gameover);
+const gameWonSound = new Audio(gamewon);
 
 const scoreEmojis = {"0": "✅",
                      "-1": "🔺", 
@@ -64,7 +67,6 @@ function Game(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        gameOverSound.play();
         addGuess();
     }
 
@@ -72,12 +74,21 @@ function Game(props) {
         if(guess.str !== "" && numMadeGuesses !== LIFES){
             
             const score = evaluateGuess(Number(guess.val));
+
+            if(score == 0){
+                // game won
+                gameWonSound.play();
+            }
                             
             setGuessStack(prevStack => prevStack.map(item => (
                 item.id === numMadeGuesses ? {...item, guess: guess.str, made: true, score: score} : item
             )))
             setNumMadeGuesses(numMadeGuesses + 1);
             setGuess({str: "", val: 0});
+        }
+
+        if(numMadeGuesses === LIFES - 1){
+            gameOverSound.play();
         }
     }
 
