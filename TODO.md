@@ -1,15 +1,15 @@
-
+# Todo file
   
-  ### TODO:
-    -[] visa ledtrådar
-    -[] fyll ut databas
-        -[] automatisera, API?
+  ### Todo
+    -[ ] visa ledtrådar
+    -[ ] fyll ut databas
+        -[ ] automatisera, API?
 
-    -[] center input field text
-    -[] add settings icon
-    -[] add language
+    -[ ] center input field text
+    -[ ] add settings icon
+    -[ ] add language
 
-  ### DONE:
+  ### Done
 
     -[x] mindre bild som går att göra större
     -[x] bilden hovrar över de andra elementen när zoomad
