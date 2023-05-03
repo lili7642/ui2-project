@@ -1,8 +1,4 @@
-# Todo file
-
-Things to do
-  
-### Todo
+# TODO:
 
 - [ ] visa ledtrådar
 - [ ] fyll ut databas
