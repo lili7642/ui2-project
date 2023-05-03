@@ -3,28 +3,6 @@ import "./Game.css"
 import Image from './Image';
 import husdata from './hus/hus_data';
 
-
-
-/**
- * 
- * TODO:
- * -[x] mindre bild som går att göra större
- * -[x] bilden hovrar över de andra elementen när zoomad
- * -[x] numrera bilderna på skärmen
- * -[x] skapa div för gjord gissning som visar om den var under eller över
- * -[x] lägg till statisk "SEK" inuti input field
- * -[] visa ledtrådar
- * -[] fyll ut databas
- * -[x] visa antal gissningar
- * -[x] input field gör mellan rum mellan siffror när man skriver => 1_000_000
- * -[x] remove scroll func
- * -[] center input field text
- * -[] add settings icon
- * -[] add language
- * 
- */
-
-
 const hus = husdata[0];
 const rättPris = hus.pris;
 const permittedError = 0.05;
