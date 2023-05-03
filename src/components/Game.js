@@ -75,7 +75,7 @@ function Game(props) {
             
             const score = evaluateGuess(Number(guess.val));
 
-            if(score == 0){
+            if(score === 0){
                 // game won
                 gameWonSound.play();
             }
