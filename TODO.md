@@ -8,7 +8,7 @@
 - [ ] add settings icon
 - [ ] add language
 
-### Done:
+## Done:
 
 - [x] mindre bild som går att göra större
 - [x] bilden hovrar över de andra elementen när zoomad
