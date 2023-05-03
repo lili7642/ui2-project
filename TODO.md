@@ -1,13 +1,35 @@
 # TODO:
 
 - [ ] visa ledtrådar
+- [ ] visa bilder eftersom
+
 - [ ] fyll ut databas
     - [ ] automatisera, API?
 
 - [ ] center input field text
-- [ ] add settings icon
+
+
 - [ ] add language
 - [ ] spara spelarstatistik -> localstorage?
+
+- [ ] spelslut
+    - [ ] vinst
+    - [ ] förlust
+
+- [ ] animationer
+
+- [ ] media files
+    - [ ] ljud
+        - [ ] vid rätt gissning
+        - [ ] vid fel gissning
+
+- [ ] interactive tutorial
+
+- [ ] document code
+
+## FIXME:
+
+- [ ] backspace fungerar inte i input
 
 ## Done:
 
@@ -19,4 +41,5 @@
 - [x] visa antal gissningar
 - [x] input field gör mellan rum mellan siffror när man skriver => 1_000_000
 - [x] remove scroll func
+- [x] add settings icon
     
