@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import husdata from './hus/hus_data';
+import hus from './hus/huspicker'
 import './Image.css'
-
-const hus = husdata[1];
 
 function Image (props) {
 

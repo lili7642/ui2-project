@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import "./Game.css"
 import Image from './Image';
-import husdata from './hus/hus_data';
+import hus from './hus/huspicker';
 
 import gameover from '../assets/sfx/game-over-sfx.mp3'
 import gamewon from '../assets/sfx/game-won-sfx.mp3'
 
-const hus = husdata[1];
 const rättPris = hus.pris;
 const permittedError = 0.05;
 const LIFES = 5;
