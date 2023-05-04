@@ -6,7 +6,6 @@
 - [ ] fyll ut databas
     - [ ] automatisera, API?
 
-- [ ] center input field text
 
 - [ ] inställningar
     - [ ] language here?
@@ -46,4 +45,6 @@
 - [x] input field gör mellan rum mellan siffror när man skriver => 1_000_000
 - [x] remove scroll func
 - [x] add settings icon
+- [x] center input field text
+
     
