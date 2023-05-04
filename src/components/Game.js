@@ -40,11 +40,8 @@ const antiFormatString = (str) => {
     return reFormattedString;
 }
 
-
-
 function Game(props) {
 
-    
     const [guess, setGuess] = useState({str: "", val: 0});
     const [numMadeGuesses, setNumMadeGuesses] = useState(0);
     const [guessStack, setGuessStack] = useState(
@@ -58,7 +55,10 @@ function Game(props) {
         const limit = 20; // CHARACTER LIMIT
         const currentGuess = antiFormatString(e.target.value.slice(0, limit));
         if (allowed.test(currentGuess)){
+            if(!(currentGuess.length === 1 && currentGuess === "0")){
                 setGuess(prev => ({str: currentGuess, val: currentGuess}));
+
+            }
         }
     }
 
@@ -88,8 +88,6 @@ function Game(props) {
             gameOverSound.play();
         }
     }
-
-   
 
     return(
         <>
@@ -125,8 +123,6 @@ function Game(props) {
                             </>
                         ))}
                 </div>
-                
-
 
                 <form onSubmit={handleSubmit}>
                     
