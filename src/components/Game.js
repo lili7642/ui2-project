@@ -46,8 +46,6 @@ function Game(props) {
 
     
     const [guess, setGuess] = useState({str: "", val: 0});
-    
-    
     const [numMadeGuesses, setNumMadeGuesses] = useState(0);
     const [guessStack, setGuessStack] = useState(
         Array.from(
@@ -56,7 +54,7 @@ function Game(props) {
     );
 
     const handleNumChange = (e) => {
-        const allowed = /^[0-9\s]*$/;
+        const allowed = /^[0-9\s]+$/;
         const limit = 20; // CHARACTER LIMIT
         const currentGuess = antiFormatString(e.target.value.slice(0, limit));
         if (allowed.test(currentGuess)){
