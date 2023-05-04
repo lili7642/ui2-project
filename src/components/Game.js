@@ -54,11 +54,11 @@ function Game(props) {
     );
 
     const handleNumChange = (e) => {
-        const allowed = /^[0-9\s]+$/;
+        const allowed = /^[0-9\s]*$/;
         const limit = 20; // CHARACTER LIMIT
         const currentGuess = antiFormatString(e.target.value.slice(0, limit));
         if (allowed.test(currentGuess)){
-            setGuess(prev => ({str: currentGuess, val: currentGuess}));
+                setGuess(prev => ({str: currentGuess, val: currentGuess}));
         }
     }
 
