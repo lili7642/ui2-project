@@ -33,7 +33,7 @@
 
 ## FIXME:
 
-- [ ] backspace fungerar inte i input
+- [x] backspace fungerar inte i input
 
 ## Done:
 
