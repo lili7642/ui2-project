@@ -1,4 +1,4 @@
-# TODO:'
+# TODO:
 
 - [ ] visa ledtrådar
 - [ ] visa fler bilder när man gissar
