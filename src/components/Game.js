@@ -57,7 +57,6 @@ function Game(props) {
         if (allowed.test(currentGuess)){
             if(!(currentGuess.length === 1 && currentGuess === "0")){
                 setGuess(prev => ({str: currentGuess, val: currentGuess}));
-
             }
         }
     }

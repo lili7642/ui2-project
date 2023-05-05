@@ -1,4 +1,4 @@
-# TODO:
+# TODO:'
 
 - [ ] visa ledtrådar
 - [ ] visa fler bilder när man gissar
@@ -17,6 +17,7 @@
 
 - [ ] spelslut
     - [ ] vinst
+        -[ ] visa rätt svar
     - [ ] förlust
 
 - [ ] animationer
