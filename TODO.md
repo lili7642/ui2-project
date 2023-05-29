@@ -11,8 +11,8 @@
     - [ ] language here?
     - [ ] darkmode / flashbang mode
 
-
 - [ ] add language
+
 - [ ] spara spelarstatistik -> localstorage?
 
 - [ ] spelslut
@@ -21,15 +21,24 @@
     - [ ] förlust
 
 - [ ] animationer
+    - [ ] autonoma
+        - [ ] snurrande logga?
+        - [ ] hoppande symboler i hörnet?
+    - [ ] interaktiva  
+        - [ ]  animation vid gissning?
+        - [ ]  animation vid vinst?
 
 - [ ] media files
     - [ ] ljud
         - [ ] vid rätt gissning
         - [ ] vid fel gissning
 
-- [ ] interactive tutorial
+- [ ] interactive tutorial / help system
+    - [ ] stegvis tutorial: prompt att klicka på fältet -> prompt att skriva en gissning -> prompt som förklarar högre eller lägre?
 
 - [ ] document code
+
+- [ ] RESPONSIVE SCREEN SIZE
 
 ## FIXME:
 
