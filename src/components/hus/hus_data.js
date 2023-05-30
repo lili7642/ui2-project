@@ -6,7 +6,7 @@ const husdata = [
         kommun: "Båstad kommun",
         pris: "2 595 000",
         rum: "4",
-        bostadstyp: "villa",
+        bostadstyp: "Villa",
         boarea: "108",
         byggår: "1974",
         images: [
@@ -44,7 +44,43 @@ const husdata = [
             "https://bilder.hemnet.se/images/1024x/d6/b1/d6b1a3533221208433e365380aedeeec.jpg",
             "https://bilder.hemnet.se/images/1024x/64/04/6404811fd1fd5b215592ec8999914b0c.jpg"
         ]
+    },
+    {
+        id: 0,
+        adress: "Karlbergsvägen 22",
+        stad: "Vasastan",
+        kommun: "Stockholms kommun",
+        pris: "29 500 000",
+        rum: "7",
+        bostadstyp: "Lägenhet",
+        boarea: "218",
+        byggår: "1901",
+        images: [
+            "https://bilder.hemnet.se/images/1024x/82/c9/82c94f88a2eb160e6dd69d9ada711ed7.jpg",
+            "https://bilder.hemnet.se/images/1024x/53/0c/530c8b8ac745a069cfa6a36ea0354f6b.jpg",
+            "https://bilder.hemnet.se/images/1024x/a5/23/a52346a3f5f1f9e860e2e7fa0ab0ad6f.jpg",
+            "https://bilder.hemnet.se/images/1024x/d0/80/d080d98bc1bcdd6e20a24e1fb7587cfe.jpg",
+            "https://bilder.hemnet.se/images/1024x/32/fc/32fcc998f718398bc122fce5b0884e7b.jpg",
+            "https://bilder.hemnet.se/images/1024x/fd/d9/fdd94d710d2cbde61a71625e9c1f586d.jpg",
+            "https://bilder.hemnet.se/images/1024x/c3/42/c342892eb40c5fdb1b2002e05f91d112.jpg",
+            "https://bilder.hemnet.se/images/1024x/8b/61/8b61338802a280ef90c5bf58156946ea.jpg",
+            "https://bilder.hemnet.se/images/1024x/d7/68/d7684f19ce93146df6c091624a68906e.jpg"
+        ]
     }
 ];
 
 export default husdata;
+
+
+// id: 0,
+// adress: "Långagärdsvägen 45",
+// stad: "Förslöv",
+// kommun: "Båstad kommun",
+// pris: "2 595 000",
+// rum: "4",
+// bostadstyp: "villa",
+// boarea: "108",
+// byggår: "1974",
+// images: [
+//     
+//]
