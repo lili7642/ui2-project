@@ -53,3 +53,25 @@ body {
   bottom: 0;
   left: 0;
 }
+
+
+.logo-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.rotating-logo {
+  animation: rotate 10s infinite linear;
+  width: 100px; /* Adjust the size as needed */
+  height: 100px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
