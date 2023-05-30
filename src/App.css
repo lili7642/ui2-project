@@ -67,6 +67,12 @@ body {
   height: 100px;
 }
 
+.still-logo {
+  animation: rotate 10s infinite linear;
+  width: 100px; /* Adjust the size as needed */
+  height: 100px;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);

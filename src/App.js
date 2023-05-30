@@ -7,7 +7,8 @@ function App() {
     <>
       <div id='mainWrapper'>
         <div className="logo-container">
-          <img src="logo.jpg" alt="Logo" className="rotating-logo" />
+          <img src="thumbnail_Logo-in.png" alt="Logo" className="still-logo" />
+          <img src="thumbnail_Logo-out.png" alt="Logo" className="rotating-logo" />
         </div>
         <div className='headerWrapper'>
           <div id='subHeaderWrapper1'>
