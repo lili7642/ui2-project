@@ -6,6 +6,9 @@ function App() {
   return (
     <>
       <div id='mainWrapper'>
+        <div className="logo-container">
+          <img src="logo.jpg" alt="Logo" className="rotating-logo" />
+        </div>
         <div className='headerWrapper'>
           <div id='subHeaderWrapper1'>
             <h1 id='titleThing'>HEMNETDLE</h1>
