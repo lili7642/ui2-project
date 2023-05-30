@@ -81,11 +81,13 @@ function Game(props) {
             )))
             setNumMadeGuesses(numMadeGuesses + 1);
             setGuess({str: "", val: 0});
+
+            if(numMadeGuesses === LIFES - 1 && score !== 0){
+                //game lost
+                gameOverSound.play();
+            }
         }
 
-        if(numMadeGuesses === LIFES - 1){
-            gameOverSound.play();
-        }
     }
 
     return(
