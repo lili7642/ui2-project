@@ -1,4 +1,4 @@
-# TODO:'
+# TODO:
 
 - [ ] visa ledtrådar
 - [ ] visa fler bilder när man gissar
@@ -34,6 +34,7 @@
 ## FIXME:
 
 - [x] backspace fungerar inte i input
+- [ ] gör sidan fullscreen -> ingen scroll
 
 ## Done:
 
