@@ -52,7 +52,7 @@ function Image (props) {
                     onClick={föregåendeBild}
                 >&#129092;</button>
                 <span id='imageNumberSpan'>
-                    #{bild}
+                    #{bild+1}
                 </span>
                 <button
                     type='button'

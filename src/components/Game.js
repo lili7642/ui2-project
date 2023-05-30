@@ -74,6 +74,7 @@ function Game(props) {
             if(score === 0){
                 // game won
                 gameWonSound.play();
+                alert("YOU WON");
             }
                             
             setGuessStack(prevStack => prevStack.map(item => (
@@ -81,11 +82,14 @@ function Game(props) {
             )))
             setNumMadeGuesses(numMadeGuesses + 1);
             setGuess({str: "", val: 0});
+
+            if(numMadeGuesses === LIFES - 1 && score !== 0){
+                //game lost
+                gameOverSound.play();
+                alert("YOU LOST");
+            }
         }
 
-        if(numMadeGuesses === LIFES - 1){
-            gameOverSound.play();
-        }
     }
 
     return(
