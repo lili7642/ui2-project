@@ -66,6 +66,28 @@ const husdata = [
             "https://bilder.hemnet.se/images/1024x/8b/61/8b61338802a280ef90c5bf58156946ea.jpg",
             "https://bilder.hemnet.se/images/1024x/d7/68/d7684f19ce93146df6c091624a68906e.jpg"
         ]
+    },
+    {
+        id: 0,
+        adress: "Södra Fiskargatan 2A",
+        stad: "Brynäs",
+        kommun: "Gävle kommun",
+        pris: "1 095 000",
+        rum: "1,5",
+        bostadstyp: "Lägenhet",
+        boarea: "39",
+        byggår: "1897",
+        images: [
+            "https://bilder.hemnet.se/images/1024x/c2/53/c25337e42ae522b0c0e8edaa71d38b3f.jpg",
+            "https://bilder.hemnet.se/images/1024x/26/19/26191abc8eebd5b02534fa8760291dbe.jpg",
+            "https://bilder.hemnet.se/images/1024x/6b/ef/6bef9f1e1eb9f12b605da751d277eba9.jpg",
+            "https://bilder.hemnet.se/images/1024x/6a/77/6a779155848a22fd4d1556ae7fb08e52.jpg",
+            "https://bilder.hemnet.se/images/1024x/eb/65/eb651322963649420b018f3ba53d9bbb.jpg",
+            "https://bilder.hemnet.se/images/1024x/ab/28/ab28f0ed801a3d709318362411c7f3dc.jpg",
+            "https://bilder.hemnet.se/images/1024x/9a/e8/9ae8f04e26a2d874813f6764e3015aab.jpg",
+            "https://bilder.hemnet.se/images/1024x/7f/2f/7f2f81f955aae95447613f5ac46942c3.jpg",
+            "https://bilder.hemnet.se/images/1024x/0a/dc/0adc0537dfc61a5f0c774966171b2571.jpg",
+        ]
     }
 ];
 
