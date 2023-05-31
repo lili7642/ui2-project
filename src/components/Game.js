@@ -74,7 +74,9 @@ function Game(props) {
             if(score === 0){
                 // game won
                 gameWonSound.play();
-                alert("YOU WON");
+                //alert("YOU WON");
+                props.setShowConfetti(true); //Passes the showConfetti-state to App.js
+                
             }
                             
             setGuessStack(prevStack => prevStack.map(item => (

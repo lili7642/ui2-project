@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
 import Game from './components/Game.js';
+import Confetti from './components/Confetti';
 
 function App() {
+
+  const [showConfetti, setShowConfetti] = useState(false); //Sets showConfetti-state to false, making it not render
+
   return (
     <>
       <div id='mainWrapper'>
@@ -21,8 +25,8 @@ function App() {
           </div>
           
         </div>
-        
-        < Game />
+        <Game setShowConfetti={setShowConfetti} />
+        <Confetti showConfetti={showConfetti} />
       </div>
       
     </>
