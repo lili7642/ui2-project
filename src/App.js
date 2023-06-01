@@ -34,6 +34,27 @@ function App() {
   const [showConfetti, setShowConfetti] = useState(false); //Sets showConfetti-state to false, making it not render
   const [isShowingScore, setShowingScore] = useState(false);
 
+  const [isTinted1, setIsTinted1] = useState(false);
+  const [isTinted2, setIsTinted2] = useState(false);
+
+
+  const handleButtonClick = () => {
+    setIsTinted1(true);
+    document.body.style.overflowY = 'hidden';
+  };
+
+
+  const handleScreenClick1 = () => {
+    setIsTinted1(false);
+    setIsTinted2(true);
+  };
+
+
+  const handleScreenClick2 = () => {
+    setIsTinted2(false);
+    document.body.style.overflowY = 'scroll';
+  };
+
   const setLang = () => {
     if(localStorage.language === 'en'){
         change_lang('sv');
@@ -63,7 +84,7 @@ function App() {
           </div>
           <div id='subHeaderWrapper2'>
             <div className='headerIcon' id='gearDiv' onClick={setLang}>⚙️</div>
-            <div className='headerIcon' id='helpDiv'>❓</div>
+            <div className='headerIcon' id='helpDiv' onClick={handleButtonClick}>❓</div>
             <div className='headerIcon' id='chartDiv' onClick={showScore}>🏆</div>
           </div>
           
@@ -99,6 +120,17 @@ function App() {
         <Game setShowConfetti={setShowConfetti} />
       </div>
         <Confetti showConfetti={showConfetti} />
+
+      <div className={`tint1 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
+      <div className={`tint2 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
+      <div className={`tint3 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
+      <div className={`tint4 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
+
+
+      <div className={`tint5 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
+      <div className={`tint6 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
+      <div className={`tint7 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
+      <div className={`tint8 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
     </>
   );
 }
