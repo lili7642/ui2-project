@@ -7,34 +7,33 @@
     - [ ] automatisera, API?
 
 
-- [ ] inställningar
-    - [ ] language here?
+- [x] inställningar
+    - [x] language here?
     - [ ] darkmode / flashbang mode
 
-- [ ] add language
+- [x] add language
 
-- [ ] spara spelarstatistik -> localstorage?
+- [x] spara spelarstatistik -> localstorage?
 
 - [ ] spelslut
-    - [ ] vinst
+    - [x] vinst
         -[ ] visa rätt svar
     - [ ] förlust
 
-- [ ] animationer
-    - [ ] autonoma
-        - [ ] snurrande logga?
-        - [ ] hoppande symboler i hörnet?
-    - [ ] interaktiva  
-        - [ ]  animation vid gissning?
-        - [ ]  animation vid vinst?
+- [x] animationer
+    - [x] autonoma
+        - [x] snurrande logga?
+        - [x] hoppande symboler i hörnet?
+    - [x] interaktiva  
+        - [x]  animation vid vinst?
 
-- [ ] media files
-    - [ ] ljud
-        - [ ] vid rätt gissning
-        - [ ] vid fel gissning
+- [x] media files
+    - [x] ljud
+        - [x] vid rätt gissning
+        - [x] vid fel gissning
 
-- [ ] interactive tutorial / help system
-    - [ ] stegvis tutorial: prompt att klicka på fältet -> prompt att skriva en gissning -> prompt som förklarar högre eller lägre?
+- [x] interactive tutorial / help system
+    - [x] stegvis tutorial: prompt att klicka på fältet -> prompt att skriva en gissning -> prompt som förklarar högre eller lägre?
 
 - [ ] document code
 
