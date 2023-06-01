@@ -40,14 +40,23 @@ body {
 
 #gearDiv:hover {
   animation: rotate 10s infinite linear;
+  cursor: pointer;
 }
 
 #helpDiv {
   right: 36px;
 }
 
+#helpDiv:hover{
+  animation: bounce 1s infinite ease-in-out;
+}
+
 #chartDiv {
   right: 60px;
+}
+
+#chartDiv:hover{
+  animation: shake 1s infinite linear;
 }
 
 #titleThing {
@@ -86,5 +95,26 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75%{
+    transform: rotate(-15deg);
   }
 }
