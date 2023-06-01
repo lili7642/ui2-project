@@ -96,7 +96,9 @@ function Game(props) {
         <>
             < Image />
             
-            <h1>{hus.adress}</h1>
+            <div id='adressDiv'>
+                <h1>{hus.adress}</h1>
+            </div>
 
             <div id='guessWrapper'>
 
@@ -107,7 +109,7 @@ function Game(props) {
                             className= "guessDiv"
                             key={item.id}
                             >
-                                GUESS {item.id + 1}/{LIFES}
+                               🤔 
                             </div>
                         :
                             <>
@@ -138,7 +140,7 @@ function Game(props) {
                         ></input>
                         <span className='inputSekDiv'>SEK</span>
                     </div>
-                    <input type='submit' value={"GUESS"}/> 
+                    <input id='guessbutton' type='submit' value={"GUESS"}/> 
                 </form>
             </div>
             
