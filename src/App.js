@@ -121,7 +121,9 @@ function App() {
       </div>
         <Confetti showConfetti={showConfetti} />
 
-      <div className={`tint1 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
+      <div className={`tint1 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}>
+      <div id="tutorialInfo1"><p>heyhey</p></div>
+      </div>
       <div className={`tint2 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
       <div className={`tint3 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
       <div className={`tint4 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}></div>
@@ -130,7 +132,9 @@ function App() {
       <div className={`tint5 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
       <div className={`tint6 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
       <div className={`tint7 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
-      <div className={`tint8 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}></div>
+      <div className={`tint8 ${isTinted2 ? 'visible' : ''}`} onClick={handleScreenClick2}>
+      <div id="tutorialInfo2"><p>heyhey</p></div>
+      </div>
     </>
   );
 }

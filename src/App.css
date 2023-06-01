@@ -234,6 +234,28 @@ body {
   display: block;
 }
 
+#tutorialInfo1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+  background-color: #757575;
+  border-radius: 10px;
+}
+
+#tutorialInfo2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 20%;
+  background-color: #757575;
+  border-radius: 10px;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
