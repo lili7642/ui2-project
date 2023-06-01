@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
 import Game from './components/Game.js';
 import outer_logo from './assets/vfx/thumbnail_Logo-out.png'
 import inner_logo from './assets/vfx/thumbnail_Logo-in.png'
+import Confetti from './components/Confetti';
 function App() {
+
+  const [showConfetti, setShowConfetti] = useState(false); //Sets showConfetti-state to false, making it not render
+
   return (
+    
     <>
       <div id='mainWrapper'>
         <div className='headerWrapper'>
@@ -25,7 +30,8 @@ function App() {
           
         </div>
         
-        < Game />
+        <Game setShowConfetti={setShowConfetti} />
+        <Confetti showConfetti={showConfetti} />
       </div>
       
     </>
