@@ -76,7 +76,7 @@ body {
 }
 
 .rotating-logo {
-  animation: rotate 10s infinite linear;
+  animation: rotate 3s infinite linear;
   width: 30px; /* Adjust the size as needed */
   height: 30px;
   z-index: 100;
@@ -91,10 +91,10 @@ body {
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateY(360deg);
   }
 }
 

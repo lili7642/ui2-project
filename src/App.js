@@ -25,8 +25,8 @@ function App() {
         <div className='headerWrapper'>
           <div id='subHeaderWrapper1'>
             <div className="logo-container">
-              <img src={inner_logo} alt="Logo1" className="still-logo" />
-              <img src={outer_logo} alt="Logo" className="rotating-logo" />
+              <img src={inner_logo} alt="Logo1" className="rotating-logo" />
+              <img src={outer_logo} alt="Logo" className="still-logo" />
             </div>
             <div className="headercontainer">
               <h1 id='titleThing'>HEMNETDLE</h1>
