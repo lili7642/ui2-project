@@ -4,7 +4,7 @@ import Game from './components/Game.js';
 import outer_logo from './assets/vfx/thumbnail_Logo-out.png'
 import inner_logo from './assets/vfx/thumbnail_Logo-in.png'
 import Confetti from './components/Confetti';
-import change_lang from "./components/language";
+import { change_lang } from "./components/language";
 
 function App() {
 

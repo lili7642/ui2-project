@@ -1,6 +1,13 @@
 
 
-
+let dyna_dict = {
+    'en' : {
+        'make_guess_placeholder' : 'Make a guess'
+    },
+    'sv' : {
+        'make_guess_placeholder' : 'Skriv din gissning'
+    }
+}
 
 let dict = {
 
@@ -43,4 +50,4 @@ function change_lang(lang){
     update_view();
 }
 
-export default change_lang;
+export { change_lang, dyna_dict }

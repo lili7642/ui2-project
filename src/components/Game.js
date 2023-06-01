@@ -6,6 +6,8 @@ import hus from './hus/huspicker';
 import gameover from '../assets/sfx/game-over-sfx.mp3'
 import gamewon from '../assets/sfx/game-won-sfx.mp3'
 
+import { dyna_dict } from './language';
+
 const rättPris = hus.pris;
 const permittedError = 0.05;
 const LIFES = 5;
@@ -164,9 +166,10 @@ function Game(props) {
                     <div className='inputDiv'>
                         <input 
                             type='text'
+                            name='guessinput'
                             value = {formatString(guess.str)}
                             onChange = {handleNumChange}
-                            placeholder='Make a guess'
+                            placeholder={'Make a guess'}
                         ></input>
                         <span className='inputSekDiv'>SEK</span>
                     </div>
