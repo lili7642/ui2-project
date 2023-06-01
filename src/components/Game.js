@@ -50,6 +50,33 @@ function Game(props) {
         )
     );
 
+    const updateGamesPlayed = () => {
+        localStorage.gamesplayed = String(1 + Number(localStorage.gamesplayed));
+    }
+
+    const updateScore = () => {
+        switch(numMadeGuesses) {
+            case 0:
+                localStorage.guess1 = String(Number(localStorage.guess1) + 1);
+                break;
+            case 1:
+                localStorage.guess2 = String(Number(localStorage.guess2) + 1);
+                break;
+            case 2:
+                localStorage.guess3 = String(Number(localStorage.guess3) + 1);
+                break;
+            case 3:
+                localStorage.guess4 = String(Number(localStorage.guess4) + 1);
+                break;
+            case 4:
+                localStorage.guess5 = String(Number(localStorage.guess5) + 1);
+                break;
+
+            default:
+                break;
+        }
+    }
+
     const handleNumChange = (e) => {
         const allowed = /^[0-9\s]*$/;
         const limit = 20; // CHARACTER LIMIT
@@ -73,6 +100,8 @@ function Game(props) {
 
             if(score === 0){
                 // game won
+                updateScore();
+                updateGamesPlayed();
                 gameWonSound.play();
                 //alert("YOU WON");
                 props.setShowConfetti(true); //Passes the showConfetti-state to App.js
@@ -87,7 +116,7 @@ function Game(props) {
             if(numMadeGuesses === LIFES - 1 && score !== 0){
                 //game lost
                 gameOverSound.play();
-                alert("YOU LOST");
+                updateGamesPlayed();
             }
         }
     }

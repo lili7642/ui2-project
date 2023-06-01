@@ -7,19 +7,22 @@ let dict = {
     'keys' : [
         // 'example',
         'titleThing',
-        'scorePopupText'
+        'scorePopupText',
+        'gamesPlayedString',
 
     ],
 
     'en' : {
         // 'example' : 'example in english'
         'titleThing' : 'HEMNETDLE',
-        'scorePopupText' : 'Player Score:'
+        'scorePopupText' : 'Player Score:',
+        'gamesPlayedString' : 'Games played: '
     },
     'sv' : {
         // 'example' : 'exempel på svenska'
         'titleThing' : 'HEMNETDLE',
-        'scorePopupText' : 'Spelarstatistik:'
+        'scorePopupText' : 'Spelarstatistik:',
+        'gamesPlayedString' : 'Antal spel: '
     }
 };
 

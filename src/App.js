@@ -21,6 +21,10 @@ function App() {
     if(!localStorage.guess4){localStorage.guess4 = '0'}
     if(!localStorage.guess5){localStorage.guess5 = '0'}
 
+    if(!localStorage.gamesplayed){
+      localStorage.gamesplayed = '0';
+    }
+
     // load all strings
     change_lang(localStorage.language);
   
@@ -70,13 +74,31 @@ function App() {
         onClick={showScore}>
           <div id="scorePopupText"></div>
           <div id="scoreInfo">
-            THE SCORE INFO
+            <div>
+              <span>1️⃣:  </span><span> {localStorage.guess1}</span>
+            </div>
+            <div>
+              <span>2️⃣: </span><span> {localStorage.guess2}</span>
+            </div>
+            <div>
+              <span>3️⃣: </span><span> {localStorage.guess3}</span>
+            </div>
+            <div>
+              <span>4️⃣: </span><span> {localStorage.guess4}</span>
+            </div>
+            <div>
+              <span>5️⃣: </span><span> {localStorage.guess5}</span>
+            </div>
+            <div> 
+              <span id="gamesPlayedString"></span>
+              <span>{localStorage.gamesplayed}</span>
+            </div>
           </div>
         </div>
         
         <Game setShowConfetti={setShowConfetti} />
-        <Confetti showConfetti={showConfetti} />
       </div>
+        <Confetti showConfetti={showConfetti} />
     </>
   );
 }

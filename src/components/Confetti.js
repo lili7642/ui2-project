@@ -7,7 +7,7 @@ const Confetti = ({ showConfetti }) => {
     <>
       {showConfetti && (
         <ReactConfetti
-          width={window.innerWidth}
+          width={3800}
           height={window.innerHeight}
         />
       )}
