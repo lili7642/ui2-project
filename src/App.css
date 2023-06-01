@@ -35,7 +35,10 @@ body {
 }
 
 #gearDiv {
-  right:0px;
+  right: 0px;
+}
+
+#gearDiv:hover {
   animation: rotate 10s infinite linear;
 }
 
