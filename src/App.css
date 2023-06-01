@@ -241,7 +241,7 @@ body {
   transform: translate(-50%, -50%);
   width: 20%;
   height: 20%;
-  background-color: #757575;
+  /* background-color: #757575; */
   border-radius: 10px;
 }
 
@@ -252,7 +252,7 @@ body {
   transform: translate(-50%, -50%);
   width: 60%;
   height: 20%;
-  background-color: #757575;
+  /* background-color: #757575; */
   border-radius: 10px;
 }
 

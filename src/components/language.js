@@ -23,7 +23,9 @@ let dict = {
         // 'example',
         'titleThing',
         'scorePopupText',
-        'gamesPlayedString'
+        'gamesPlayedString',
+        "tutorialInfo1",
+        "tutorialInfo2"
 
     ],
 
@@ -32,13 +34,17 @@ let dict = {
         'titleThing' : 'HEMNETDLE',
         'scorePopupText' : 'Player Score:',
         'gamesPlayedString' : 'Games played: ',
+        "tutorialInfo1" : "Use the arrows to shift between the pictures. \n\nYour mission is to guess the starting price of the property!\n\n Click to continue...",
+        "tutorialInfo2" : "Write your guess and press ENTER. \n\n 🔺 means you guessed too low. \n🔻 means you guessed too high. \n\nIn order to win you have to be within 5% of the correct price! \n\nClick to play..."
 
     },
     'sv' : {
         // 'example' : 'exempel på svenska'
         'titleThing' : 'HEMNETDLE',
         'scorePopupText' : 'Spelarstatistik:',
-        'gamesPlayedString' : 'Antal spel: '
+        'gamesPlayedString' : 'Antal spel: ',
+        "tutorialInfo1" : "Använd pilarna för att bläddra mellan bilderna. \n\n Ditt uppdrag är att gissa utgångspriset för fastigheten! \n\n Klicka för att fortsätta...",
+        "tutorialInfo2" : "Skriv din gissning och tryck ENTER.\n\n 🔺 innebär att du gissade för lågt. \n🔻 innebär att du gissade för högt. \n\n För att vinna så behöver din gissning var inom 5% av det rätta priset! \n\n Klicka för att spela..."
     }
 };
 
@@ -50,7 +56,7 @@ function update_view() {
     let keys = dict['keys'];
     for (let idx in keys){
         let key = keys[idx];
-        document.getElementById(key).textContent = get_string(key);
+        document.getElementById(key).innerText = get_string(key);
     }
     keys = dyna_dict['dyna_keys']
     document.getElementsByName('make_guess_placeholder')[0].placeholder = dyna_dict[localStorage.language]['make_guess_placeholder'];
