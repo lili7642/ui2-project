@@ -89,7 +89,6 @@ function Game(props) {
                 alert("YOU LOST");
             }
         }
-
     }
 
     return(
