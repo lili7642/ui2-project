@@ -1,22 +1,25 @@
-if(!localStorage.language){
-    localStorage.language = 'en';
-}
+
+
+
 
 let dict = {
 
     'keys' : [
         // 'example',
-        'titleThing'
+        'titleThing',
+        'scorePopupText'
 
     ],
 
     'en' : {
         // 'example' : 'example in english'
-        'titleThing' : 'HEMNETDLE'
+        'titleThing' : 'HEMNETDLE',
+        'scorePopupText' : 'Player Score:'
     },
     'sv' : {
         // 'example' : 'exempel på svenska'
-        'titleThing' : 'HEMNETDLE'
+        'titleThing' : 'HEMNETDLE',
+        'scorePopupText' : 'Spelarstatistik:'
     }
 };
 

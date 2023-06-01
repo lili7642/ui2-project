@@ -7,8 +7,10 @@ body {
 }
 
 #mainWrapper {
+  position: relative;
   width: 550px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .headerWrapper {
@@ -36,6 +38,7 @@ body {
 
 #gearDiv {
   right: 0px;
+  user-select: none;
 }
 
 #gearDiv:hover {
@@ -45,18 +48,24 @@ body {
 
 #helpDiv {
   right: 36px;
+  user-select: none;
 }
 
 #helpDiv:hover{
   animation: bounce 1s infinite ease-in-out;
+  animation-fill-mode: both;
+  cursor: pointer;
+
 }
 
 #chartDiv {
   right: 60px;
+  user-select: none;
 }
 
 #chartDiv:hover{
   animation: shake 1s infinite linear;
+  cursor: pointer;
 }
 
 #titleThing {
@@ -117,4 +126,31 @@ body {
   75%{
     transform: rotate(-15deg);
   }
+}
+
+#scorePopup{
+  position: fixed;
+  border: 2px solid white;
+  background-color: #23272f;
+  z-index: 100;
+  width: 440px;
+  margin-left: 55px;
+  margin-top: 55px;
+  border-radius: 5px;
+  display: none;
+}
+
+#scorePopupText {
+  padding: 5px;
+  font-weight: bold;
+}
+
+#scoreInfo{
+  border: 2px white solid;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  height: 100px;
 }
