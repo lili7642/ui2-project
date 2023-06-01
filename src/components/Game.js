@@ -16,7 +16,7 @@ const gameWonSound = new Audio(gamewon);
 
 const scoreEmojis = {"0": "✅",
                      "-1": "🔺", 
-                    "1": "🔻"};
+                     "1": "🔻"};
 
 function evaluateGuess(guess){
     const pris = Number(antiFormatString(rättPris));
@@ -115,13 +115,14 @@ function Game(props) {
                             <>
                             <div
                             className= "madeGuessDiv"
+                            style={{backgroundColor: item.score===0 ? '#FECB2E' : '#0076A3'}}
                             key={item.id}
                             >
                                 {formatString(item.guess) + " "}
                                 <span className='sekDiv'>
                                  SEK
                                 </span>   
-                                <span className='scoreSpan'>
+                                <span className='scoreSpan' >
                                     {scoreEmojis[String(item.score)]}
                                 </span>
                             </div>
