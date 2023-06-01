@@ -89,6 +89,126 @@ body {
   height: 30px;
 }
 
+.tint1 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 415px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.tint2 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0px;
+  left: calc(50% + 280px);
+  width: 100%;
+  height: 415px;
+  z-index: 9999;
+  display: none;
+}
+
+.tint3 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0px;
+  right: calc(50% + 280px);
+  width: 100%;
+  height: 415px;
+  z-index: 9999;
+  display: none;
+}
+
+.tint4 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  bottom: calc(100% - 48px);
+  left: calc(50% - 280px);
+  width: 560px;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.tint1.visible {
+  display: block;
+}
+
+.tint2.visible {
+  display: block;
+}
+
+.tint3.visible {
+  display: block;
+}
+
+.tint4.visible {
+  display: block;
+}
+
+.tint5 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 737px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.tint6 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0px;
+  left: calc(50% + 280px);
+  width: 100%;
+  height: 737px;
+  z-index: 9999;
+  display: none;
+}
+
+.tint7 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0px;
+  right: calc(50% + 280px);
+  width: 100%;
+  height: 737px;
+  z-index: 9999;
+  display: none;
+}
+
+.tint8 {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  bottom: calc(100% - 458px);
+  left: calc(50% - 280px);
+  width: 560px;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.tint5.visible {
+  display: block;
+}
+
+.tint6.visible {
+  display: block;
+}
+
+.tint7.visible {
+  display: block;
+}
+
+.tint8.visible {
+  display: block;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
