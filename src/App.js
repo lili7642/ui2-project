@@ -18,10 +18,17 @@ function App() {
     }
   }
 
-  return (
+  const showScore = () => {
     
+  }
+
+  return (
     <>
       <div id='mainWrapper'>
+        <div id="scorePopup">
+
+        </div>
+
         <div className='headerWrapper'>
           <div id='subHeaderWrapper1'>
             <div className="logo-container">
@@ -43,7 +50,6 @@ function App() {
         <Game setShowConfetti={setShowConfetti} />
         <Confetti showConfetti={showConfetti} />
       </div>
-      
     </>
   );
 }
