@@ -140,7 +140,8 @@ function Game(props) {
                             className= "guessDiv"
                             key={item.id}
                             >
-                               🤔 
+                               <span className='guessNotMadeString'>  </span>
+                               <span>{item.id + 1}/{LIFES}</span> 
                             </div>
                         :
                             <>
@@ -166,14 +167,18 @@ function Game(props) {
                     <div className='inputDiv'>
                         <input 
                             type='text'
-                            name='guessinput'
+                            name='make_guess_placeholder'
                             value = {formatString(guess.str)}
                             onChange = {handleNumChange}
                             placeholder={'Make a guess'}
                         ></input>
                         <span className='inputSekDiv'>SEK</span>
                     </div>
-                    <input id='guessbutton' type='submit' value={"GUESS"}/> 
+                    <input 
+                    id='guessbutton' 
+                    type='submit'
+                    name='guess_button_placeholder'
+                    value={"GUESS"}/> 
                 </form>
             </div>
             
