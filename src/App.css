@@ -43,7 +43,7 @@ body {
 }
 
 #gearDiv:hover {
-  animation: rotate 10s infinite linear;
+  animation: shake 1s infinite linear;
   cursor: pointer;
 }
 

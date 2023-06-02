@@ -83,7 +83,7 @@ function App() {
             </div>
           </div>
           <div id='subHeaderWrapper2'>
-            <div className='headerIcon' id='gearDiv' onClick={setLang}>🌎</div>
+            <div className='headerIcon' id='gearDiv' onClick={setLang}></div>
             <div className='headerIcon' id='helpDiv' onClick={handleButtonClick}>❓</div>
             <div className='headerIcon' id='chartDiv' onClick={showScore}>🏆</div>
           </div>
