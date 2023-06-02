@@ -44,7 +44,7 @@ let dict = {
         'scorePopupText' : 'Spelarstatistik:',
         'gamesPlayedString' : 'Antal spel: ',
         "tutorialInfo1" : "Använd pilarna för att bläddra mellan bilderna. \n\n Ditt uppdrag är att gissa utgångspriset för fastigheten! \n\n Klicka för att fortsätta...",
-        "tutorialInfo2" : "Skriv din gissning och tryck ENTER.\n\n 🔺 innebär att du gissade för lågt. \n🔻 innebär att du gissade för högt. \n\n För att vinna så behöver din gissning var inom 5% av det rätta priset! \n\n Klicka för att spela..."
+        "tutorialInfo2" : "Skriv din gissning och tryck ENTER.\n\n 🔺 innebär att du gissade för lågt. \n🔻 innebär att du gissade för högt. \n\n För att vinna så behöver din gissning vara inom 5% av det rätta priset! \n\n Klicka för att spela..."
     }
 };
 
