@@ -6,15 +6,30 @@ import inner_logo from './assets/vfx/thumbnail_Logo-in.png'
 import Confetti from './components/Confetti';
 import { change_lang } from "./components/language";
 
+/* File: App.js
+
+This file is the "base" for the entire program, where the Game-component from Game.js is 
+imported and displayed inside a wrapper. The Header with some buttons for language, tutorial and stats
+is created here, and the tutorial is implemented in this file.
+
+Animations are made with the corresponding App.css-file, where icons are made to move in certain ways either when
+hovered over or all the time. 
+*/
+
 function App() {
 
   /* This function runs only once on page load*/
   useEffect(() => {
 
-    //set languagae to english if not already set
+    //set language to english if not already set
     if(!localStorage.language){
       localStorage.language = 'en';
     }
+
+    //Stats for how many games are played and how many guesses it takes to get it right is kept
+    //in local storage
+
+    //Set stats to zero if nothing is already stored
     if(!localStorage.guess1){localStorage.guess1 = '0'}
     if(!localStorage.guess2){localStorage.guess2 = '0'}
     if(!localStorage.guess3){localStorage.guess3 = '0'}
@@ -34,27 +49,35 @@ function App() {
   const [showConfetti, setShowConfetti] = useState(false); //Sets showConfetti-state to false, making it not render
   const [isShowingScore, setShowingScore] = useState(false);
 
+
+  //The tutorial uses 2 sets of "tints" to highlight different parts of the screen
+  //Tints are disabled by default
   const [isTinted1, setIsTinted1] = useState(false);
   const [isTinted2, setIsTinted2] = useState(false);
 
 
+  //Function to activeta first tint for tutorial
   const handleButtonClick = () => {
     setIsTinted1(true);
     document.body.style.overflowY = 'hidden';
+
   };
 
-
+  //Function to activate second tint in tutorial
   const handleScreenClick1 = () => {
     setIsTinted1(false);
     setIsTinted2(true);
   };
 
 
+  //Function for exiting tutorial
   const handleScreenClick2 = () => {
     setIsTinted2(false);
     document.body.style.overflowY = 'scroll';
   };
 
+
+  //Function to change language
   const setLang = () => {
     if(localStorage.language === 'en'){
         change_lang('sv');
@@ -69,7 +92,7 @@ function App() {
 
   return (
     <>
-      <div id='mainWrapper'>
+      <div id='mainWrapper'> 
 
 
         <div className='headerWrapper'>
@@ -121,6 +144,7 @@ function App() {
       </div>
         <Confetti showConfetti={showConfetti} />
 
+      
       <div className={`tint1 ${isTinted1 ? 'visible' : ''}`} onClick={handleScreenClick1}>
       <div id="tutorialInfo1"><p>heyhey</p></div>
       </div>

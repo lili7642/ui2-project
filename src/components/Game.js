@@ -8,6 +8,13 @@ import gamewon from '../assets/sfx/game-won-sfx.mp3'
 
 import { dyna_dict } from './language';
 
+/* File: Game.js
+
+This file implements the game logics, i.e. handling entering and evaluation of guesses as well as what 
+happens when a guess is made. It gets the image-component from Image.js and returns a component containg image + guess-box.
+*/ 
+
+
 const rättPris = hus.pris;
 const permittedError = 0.05;
 const LIFES = 5;
@@ -16,31 +23,39 @@ const LIFES = 5;
 const gameOverSound = new Audio(gameover);
 const gameWonSound = new Audio(gamewon);
 
+
+//Symbols to show after a guess is made
 const scoreEmojis = {"0": "✅",
                      "-1": "🔺", 
                      "1": "🔻"};
 
+
+//Function called when a guess is made, to evaluate result of guess                    
 function evaluateGuess(guess){
     const pris = Number(antiFormatString(rättPris));
     if(guess < pris*(1-permittedError)){
-        return(-1); // SVAR FÖR LÅGT
+        return(-1); // guess too low
     }else if (guess > pris*(1+permittedError)){
-        return(1); // SVAR FÖR HÖGT
+        return(1); // guess too high
     }else{
-        return 0; // RÄTT SVAR
+        return 0; // correct guess
     }
 }
 
- // ADDS SPACES TO NUMBER 1234567 => 1 234 567
+
+ // ADDS SPACES TO NUMBER e.g. 1234567 => 1 234 567
  const formatString = (str) => {
     const formattedString = str.split('').reverse().join('').replace(/(.{3})/g, '$1 ').trim().split('').reverse().join('');
     return formattedString;
 }
 
+
+// Remove spaces from number
 const antiFormatString = (str) => {
     const reFormattedString = str.split('').reverse().join('').replace(/\s/g, '').split('').reverse().join('');
     return reFormattedString;
 }
+
 
 function Game(props) {
 
@@ -52,10 +67,12 @@ function Game(props) {
         )
     );
 
+    //Function to update total number of games played when a game is completed
     const updateGamesPlayed = () => {
         localStorage.gamesplayed = String(1 + Number(localStorage.gamesplayed));
     }
 
+    //Function to update the saved stats after a completed game
     const updateScore = () => {
         switch(numMadeGuesses) {
             case 0:
@@ -79,6 +96,8 @@ function Game(props) {
         }
     }
 
+
+    //Function that handles the changes when the user enters numbers into guess-box
     const handleNumChange = (e) => {
         const allowed = /^[0-9\s]*$/;
         const limit = 20; // CHARACTER LIMIT
@@ -90,11 +109,15 @@ function Game(props) {
         }
     }
 
+
+    //Change current guess when the user enter their guess
     const handleSubmit = (event) => {
         event.preventDefault();
         addGuess();
     }
 
+    
+    //Game logics for when a guess is made is implemented here
     const addGuess = () => {
         if(guess.str !== "" && numMadeGuesses !== LIFES){
             

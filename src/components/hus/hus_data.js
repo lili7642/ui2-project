@@ -1,3 +1,13 @@
+/*File: hus_data.js
+
+This file contains a dictionary with all the data for the houses that are used in the game.
+Links to images of each house is included (hopefully the links doesn't expire). Other data used
+such as price and adress is also included. 
+
+The data has been gathered manually from house adverts on Hemnet.
+
+*/
+
 
 const husdata = [
     {   id: 0,

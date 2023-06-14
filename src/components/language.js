@@ -1,4 +1,8 @@
+/* File: language.js
 
+This file contains the dictionaries that holds all strings in Swedish and English.
+Functions to interact with the dictionaries are also conatined here. 
+*/
 
 let dyna_dict = {
     'dyna_keys' : [
@@ -51,10 +55,14 @@ let dict = {
     }
 };
 
+
+//Get string for certain key in current language
 function get_string(key){
     return dict[localStorage.language][key];
 }
 
+
+//Update strings
 function update_view() {
     let keys = dict['keys'];
     for (let idx in keys){
@@ -71,6 +79,7 @@ function update_view() {
     }
 }
 
+//Change language variable
 function change_lang(lang){
     localStorage.language = lang;
     update_view();

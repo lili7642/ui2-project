@@ -3,7 +3,7 @@
 - [ ] visa ledtrådar
 - [ ] visa fler bilder när man gissar
 
-- [ ] fyll ut databas
+- [x/2] fyll ut databas
     - [ ] automatisera, API?
 
 
@@ -35,9 +35,9 @@
 - [x] interactive tutorial / help system
     - [x] stegvis tutorial: prompt att klicka på fältet -> prompt att skriva en gissning -> prompt som förklarar högre eller lägre?
 
-- [ ] document code
+- [x] document code
 
-- [ ] RESPONSIVE SCREEN SIZE
+- [x/2] RESPONSIVE SCREEN SIZE
 
 ## FIXME:
 
