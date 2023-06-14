@@ -56,7 +56,7 @@ function App() {
   const [isTinted2, setIsTinted2] = useState(false);
 
 
-  //Function to activeta first tint for tutorial
+  //Function to activeta first tint for tutorial, also disables scroll so that the right part is highlighted
   const handleButtonClick = () => {
     setIsTinted1(true);
     document.body.style.overflowY = 'hidden';

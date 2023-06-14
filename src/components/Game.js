@@ -67,12 +67,12 @@ function Game(props) {
         )
     );
 
-    //Function to update total number of games played when a game is completed
+    //Update total number of games played when a game is completed
     const updateGamesPlayed = () => {
         localStorage.gamesplayed = String(1 + Number(localStorage.gamesplayed));
     }
 
-    //Function to update the saved stats after a completed game
+    //Update the saved stats after a completed game
     const updateScore = () => {
         switch(numMadeGuesses) {
             case 0:
@@ -97,7 +97,7 @@ function Game(props) {
     }
 
 
-    //Function that handles the changes when the user enters numbers into guess-box
+    //Handles the changes when the user enters numbers into guess-box
     const handleNumChange = (e) => {
         const allowed = /^[0-9\s]*$/;
         const limit = 20; // CHARACTER LIMIT
