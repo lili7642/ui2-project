@@ -4,7 +4,7 @@
 - [ ] visa fler bilder när man gissar
 
 - [x/2] fyll ut databas
-    - [ ] automatisera, API?
+    - [ ] automatisera, API? 
 
 
 - [x] inställningar

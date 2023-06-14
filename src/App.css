@@ -87,15 +87,14 @@ body {
 
 .rotating-logo {
   animation: rotate 3s infinite ease-in-out;
-  width: 30px; /* Adjust the size as needed */
+  width: 30px; 
   height: 30px;
   z-index: 100;
 }
 
 .still-logo {
-  /* animation: rotate 10s infinite linear; */
   position: absolute;
-  width: 30px; /* Adjust the size as needed */
+  width: 30px;
   height: 30px;
 }
 
@@ -241,7 +240,6 @@ body {
   transform: translate(-50%, -50%);
   width: 20%;
   height: 20%;
-  /* background-color: #757575; */
   border-radius: 10px;
 }
 
@@ -252,7 +250,6 @@ body {
   transform: translate(-50%, -50%);
   width: 60%;
   height: 20%;
-  /* background-color: #757575; */
   border-radius: 10px;
 }
 

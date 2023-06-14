@@ -1,68 +1,28 @@
 # HEMNETDLE IN REACT
+## Documentation
+### Files and folders
 
-## Available Scripts
+In the *\src* folder, App.js is the file that makes the "base" for the project. The App.js-file utilizes components from the *\components* director, where Game.js and Image.js creates the main components for the game, more documentation on these are inside the files. The *\hus* directory contains the house-database as well as functionality to randomly pick a house for each game. *\assets* contains files for the sound effects and the animated logo. 
 
-In the project directory, you can run:
+## Run the program
+To run the program in development mode, npm, node and react-confetti has to be installed. React confetti can be installed by simply writing "npm install react-confetti" in console (as long as npm is installed). To start the program, cd into the project folder (e.g. "..\ui2-project") and then type "npm run start", which will run the program in localhost:3000.
+Currently, the page has to be refreshed in order to start a new game once the game has been won or lost. 
 
-### `npm start`
+## Remaining problems
+Most of the remaing fixes that would need to be done before a "release" is related to game logics and extended functionality, rather than bugfixes etc. Main things that would need fixing is:
+- Currently you can keep guessing even after a correct guess has been made, which would need to be prohibited and instead give the option to start a new game.
+- The only way to start a new game after winning/losing is currently to reload the page, which should be changed so that a button can start a new game.
+- Further population of the house database.
+- The player should get a clue after each wrong guess, like which county/city the property is located in, the number of square meters etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Work distribution
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Linus:
+Game logics, language change, saving/displaying past game stats
 
-### `npm test`
+### Markus:
+Tutorial, documentation, animations
+### Samuel:
+Confetti animation, styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

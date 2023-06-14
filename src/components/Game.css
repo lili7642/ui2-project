@@ -1,5 +1,5 @@
 
-  /* INPUT FORM STYLING*/
+  
 
   #adressDiv {
     margin-top: -20px;
@@ -21,7 +21,7 @@
     position: relative;
     width: 100%;
 
-    box-sizing: border-box; /*CHAT GPT MAGIC */
+    box-sizing: border-box;
 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -71,7 +71,6 @@
   }
 
   input[type = number] {
-    /* display: inline-block; */
     padding: 1rem 2rem;
     margin-bottom: 0;
   }
